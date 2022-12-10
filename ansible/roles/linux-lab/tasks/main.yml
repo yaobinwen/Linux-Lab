@@ -1,0 +1,2 @@
+- include_tasks: root-dir.yml
+- include_tasks: vagrantfile.yml

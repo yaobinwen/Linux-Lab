@@ -1,0 +1,11 @@
+- name: Set up the Linux Lab environment.
+  hosts: all
+  gather_facts: yes # Needed by ansible_env
+
+  vars_prompt:
+    - name: linux_lab_root_dir
+      prompt: 'Path of Linux Lab root directory'
+      private: no # Show user input
+
+  roles:
+    - role: linux-lab

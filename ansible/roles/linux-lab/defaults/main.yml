@@ -1,0 +1,6 @@
+vm_box: "ubuntu/jammy64"
+vm_cpus: 4
+vm_hostname: "ywen-linux-lab"
+vm_name: "linux-lab"
+vm_ram_in_MB: 8192
+vm_shared_folder_guest_path: "/lab"

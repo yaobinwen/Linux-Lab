@@ -1,0 +1,13 @@
+- name: Get the status of {{linux_lab_root_dir}}.
+  stat:
+    path: "{{linux_lab_root_dir}}"
+  register: linux_lab_root_dir_stat
+
+- name: Create {{linux_lab_root_dir}} if it doesn't exist.
+  when: not linux_lab_root_dir_stat.stat.exists
+  file:
+    path: "{{linux_lab_root_dir}}"
+    state: directory
+    owner: "{{ansible_env.USER}}"
+    group: "{{ansible_env.USER}}"
+    mode: "0o755"

@@ -1,0 +1,4 @@
+- name: Generate Vagrantfile at {{linux_lab_root_dir}}.
+  template:
+    src: Vagrantfile.j2
+    dest: "{{linux_lab_root_dir}}/Vagrantfile"
